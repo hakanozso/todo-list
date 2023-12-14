@@ -1,0 +1,68 @@
+
+
+.todo-text{
+    display: block;
+    overflow: auto !important;;
+ 
+}
+
+
+.card{
+    margin-bottom:4%;
+    border-radius: 3px;
+}
+
+.card-header{
+    background-color: whitesmoke;
+}
+
+#todos{
+    margin-top: 5%;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+#add-todo{
+    margin-bottom:25px;
+}
+
+
+table{
+    width: 100%;
+}
+
+/* table tr td{
+    max-width: 20%;
+} */
+
+#todo-list{
+    
+
+}
+
+#todo-list>h1{
+    margin-block-start: 5px;
+    padding-inline-start: 15px;
+    padding-block-end: 1px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px;
+    border-radius: 5px;
+    
+}
+
+#todo-list > table{
+    min-width: 100%;
+    /* border-collapse: collapse; */
+}
+
+#todo-list>table tr td{
+    /* border:1px solid black; */
+    padding: 5px;
+}
+
+#todo-list>table tr td:nth-child(3){
+  
+    min-width: 100px;
+}
+

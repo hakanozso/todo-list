@@ -27,7 +27,7 @@ function showLoader(button) {
 
     console.log('object :>> ', button.target.children[0].children[1]);
 
-    let addTodoBtn = button.target.children[0].children[1]
+    let addTodoBtn = button.target.children[0].children[1];
 
 
     addTodoBtn.setAttribute("disabled", true);

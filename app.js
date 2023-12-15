@@ -7,9 +7,7 @@ todoForm.addEventListener("submit", addTodo);
 todoList.addEventListener("click", removeTodo);
 
 
-
 function createAlert(type, message) {
-
 
     let prevAlert = todoList.parentElement.children[0];
 
@@ -27,29 +25,23 @@ function createAlert(type, message) {
 
     setTimeout(() => {
         alert.remove();
-    }, 1500);
+    }, 1000);
 
 }
 
 
 function showLoader(button) {
 
-    console.log('object :>> ', button.target.children[0].children[1]);
-
     let addTodoBtn = button.target.children[0].children[1];
 
-
     addTodoBtn.setAttribute("disabled", true);
-    // ch1.disabled = true;
     addTodoBtn.textContent = "";
 
     const faloader = document.createElement("i");
     faloader.className = "fas fa-spinner fa-spin";
     addTodoBtn.appendChild(faloader);
 
-
     setTimeout(() => {
-        // ch1.disabled = false;
         addTodoBtn.removeAttribute("disabled");
         addTodoBtn.textContent = "Add Todo";
         faloader.remove();
@@ -92,7 +84,6 @@ function addTodoUI() {
 
 
 function removeTodo(e) {
-    console.log('object :>> ', e);
 
     if (e.target.classList.contains("delete-todo")) {
 

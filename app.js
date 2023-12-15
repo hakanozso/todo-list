@@ -13,7 +13,7 @@ function createAlert(type, message) {
 
     let prevAlert = todoList.parentElement.children[0];
 
-
+    // The previous alert is removed to prevent duplicate notifications.
     if (prevAlert.classList.contains("alert")) {
         prevAlert.remove();
     }

@@ -8,7 +8,6 @@ todoTable.addEventListener("click", removeTodo);
 
 
 
-
 function createAlert(type, message) {
 
     const alert = document.createElement("div");

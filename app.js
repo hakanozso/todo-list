@@ -24,27 +24,28 @@ function createAlert(type, message) {
 }
 
 
-function showLoader(e) {
+function showLoader(button) {
 
-    console.log('object :>> ', e);
+    console.log('object :>> ', button.target.children[0].children[1]);
 
-    // const todoDelBtn = this;
-    // const todoDelBtnSpan = e.target;
-    // todoDelBtn.setAttribute("disabled", true);
-    // // ch1.disabled = true;
-    // todoDelBtnSpan.textContent = "";
-
-    // const faloader = document.createElement("i");
-    // faloader.className = "fas fa-spinner fa-spin";
-    // todoDelBtn.appendChild(faloader)
+    let addTodoBtn = button.target.children[0].children[1]
 
 
-    // setTimeout(() => {
-    //     // ch1.disabled = false;
-    //     todoDelBtn.removeAttribute("disabled");
-    //     todoDelBtnSpan.textContent = "Add Todo";
-    //     faloader.remove();
-    // }, 1500);
+    addTodoBtn.setAttribute("disabled", true);
+    // ch1.disabled = true;
+    addTodoBtn.textContent = "";
+
+    const faloader = document.createElement("i");
+    faloader.className = "fas fa-spinner fa-spin";
+    addTodoBtn.appendChild(faloader);
+
+
+    setTimeout(() => {
+        // ch1.disabled = false;
+        addTodoBtn.removeAttribute("disabled");
+        addTodoBtn.textContent = "Add Todo";
+        faloader.remove();
+    }, 300);
 
 }
 

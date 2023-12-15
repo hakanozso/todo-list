@@ -1,20 +1,29 @@
-const todoTable = document.querySelector("#todo-list");
+const todoList = document.querySelector("#todo-list");
 const todoText = document.getElementById("todoText")
 const todoForm = document.querySelector("#todo-form");
 
 
 todoForm.addEventListener("submit", addTodo);
-todoTable.addEventListener("click", removeTodo);
+todoList.addEventListener("click", removeTodo);
 
 
 
 function createAlert(type, message) {
 
+
+    let prevAlert = todoList.parentElement.children[0];
+
+
+    if (prevAlert.classList.contains("alert")) {
+        prevAlert.remove();
+    }
+
+
     const alert = document.createElement("div");
     alert.className = `alert alert-${type}`;
     alert.role = "alert";
     alert.textContent = message;
-    todoTable.parentElement.prepend(alert);
+    todoList.parentElement.prepend(alert);
 
     setTimeout(() => {
         alert.remove();
@@ -67,7 +76,7 @@ function addTodo(e) {
 
 
 function addTodoUI() {
-    todoTable.innerHTML += `
+    todoList.innerHTML += `
 
   <div class="card d-flex flex-row">
   <div class="card-body todo-text">
